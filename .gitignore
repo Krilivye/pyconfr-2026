@@ -1,0 +1,7 @@
+*~
+*.py[co]
+build/
+/.venv/
+
+# See schedule.py
+token.key

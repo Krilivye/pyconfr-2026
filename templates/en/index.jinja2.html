@@ -1,0 +1,61 @@
+{% extends '_layout.jinja2' %}
+
+{% block content %}
+  <article class="coverboard">
+    <h2>Presenting PyConFR 2026!</h2>
+
+    <aside>
+      <span>16</span><sup>th</sup> edition
+    </aside>
+
+    <p class="pycon-date">Fall 2026</p>
+
+    <p>
+      Organized by <a href="https://www.afpy.org">AFPy</a>, this four-day conference is free,
+      entirely coordinated by volunteers and dedicated to bringing
+      together people interested by the <a href="https://www.python.org/">Python</a> programming language.
+    </p>
+  </article>
+
+  <article class="afpy">
+    <h2>AFPy, Association Francophone Python</h2>
+
+    <ul class="buttons">
+      <li>
+        <a href="https://www.afpy.org">Our website</a>
+      </li>
+    </ul>
+
+    <section>
+      <h3>
+        AFPy promotes the Python language, both to the informed public and to beginners.
+      </h3>
+      <p>
+        We promote the Python programming language to the widest possible
+        audience.
+      </p>
+      <p>
+        We diffuse our knowledge and are open to external contributions.
+      </p>
+      <p>
+        Solidarity and democracy increase the potential of each one of us.
+      </p>
+    </section>
+  </article>
+
+  <article class="become-sponsor">
+    <aside class="subtitle">Support us!</aside>
+    <h2>Our Sponsors</h2>
+
+    {{ brochures(lang) }}
+
+    {{ sponsors(lang, only_logo=True) }}
+
+    <section class="contact-sponsor">
+      <p>
+        The team is available to answer your questions about the event
+        at <a href="mailto:contact@pycon.fr">contact@pycon.fr</a>
+      </p>
+    </section>
+  </article>
+{% endblock content %}

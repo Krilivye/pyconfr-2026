@@ -1,0 +1,90 @@
+{%- set MENU = (
+  ('index', ('À propos', 'About')),
+  ('sponsors', ('Sponsors', 'Sponsors')),
+  ('news', ('Actualités', 'News')),
+  ('conduct', ('Code de conduite', 'Code of Conduct')),
+  ('support', ('Nous soutenir', 'Support Us')),
+) -%}
+{%- set TITLES = dict(MENU) -%}
+
+{%- set title = title or dict(TITLES).get(page_name, ['', ''])[1 if lang == 'en' else 0] -%}
+
+{%- set nav_label = 'Menu principal' if lang == 'fr' else 'Main menu' -%}
+{%- set lang_label = 'Changer de langue' if lang == 'fr' else 'Switch languages' -%}
+{%- set footer_label = 'Pied de page' if lang == 'fr' else 'Footer' -%}
+
+{%- from '_sponsors.jinja2' import brochures, sponsoring, sponsors -%}
+
+<!DOCTYPE html>
+
+<html lang="{{ lang }}">
+  <head>
+    {% block head %}
+      <title>{{ title }} − PyConFR 2026</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta property="og:image" content="{{ url_for('static', filename='images/logo-full.svg') }}"/>
+
+      <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.svg') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') | version }}">
+      <script>/* Stupid hack for iOS :hover */ document.addEventListener("touchstart", function(){}, true);</script>
+    {% endblock head %}
+  </head>
+
+  <body id="{{ page_name }}">
+    <header>
+      {% block header %}
+        <h1><a href="{{ url_for('page', lang=lang) }}">PyConFR 2026</a></h1>
+
+        <nav aria-label="{{ nav_label }}">
+          <ul id="pages">
+            {% for endpoint, (title_fr, title_en) in MENU %}
+              <li class="{{ 'active' if page_name == endpoint }}">
+                <a href="{{ url_for('page', name=endpoint, lang=lang) }}">{{ title_en if lang == 'en' else title_fr }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+
+        <nav aria-label="{{ lang_label }}">
+          {% if request.endpoint in ('page', 'talks') %}
+            {% set view_args = request.view_args %}
+            {{ view_args.pop('lang', 'en') and '' }}
+            <ul id="languages">
+              <li id="french" class="{{ 'active' if lang == 'fr' }}">
+                <a title="Français" href="{{ url_for(request.endpoint, lang='fr', **view_args) }}">
+                  🇫🇷 FR
+                </a>
+              </li>
+              <li id="english" class="{{ 'active' if lang == 'en' }}">
+                <a title="English" href="{{ url_for(request.endpoint, lang='en', **view_args) }}">
+                  🇬🇧 EN
+                </a>
+              </li>
+            </ul>
+          {% endif %}
+        </nav>
+      {% endblock header %}
+    </header>
+
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+
+    <footer>
+      {% block footer %}
+        <nav aria-label="{{ footer_label }}">
+          <ul>
+            <li><a href="mailto:contact@pycon.fr">Email</a></li>
+            <li><a href="https://mamot.fr/@AFPy">Mastodon</a></li>
+            <li><a href="https://fr.linkedin.com/company/afpy">LinkedIn</a></li>
+            <li><a href="https://discuss.afpy.org/">Discourse</a></li>
+            <li><a href="https://github.com/AFPy/pyconfr-2026">GitHub</a></li>
+            <li><a href="https://frozen-flask.readthedocs.io/">Frozen-Flask</a></li>
+            <li><a href="https://afpy.org/">© 2026 AFPy</a></li>
+          </ul>
+        </nav>
+      {% endblock footer %}
+    </footer>
+  </body>
+</html>
