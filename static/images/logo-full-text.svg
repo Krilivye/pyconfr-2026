@@ -11,7 +11,7 @@
    viewBox="0 0 445.479 160.492"
    enable-background="new 0 0 445.479 160.492"
    xml:space="preserve"
-   sodipodi:docname="logo-full.svg"
+   sodipodi:docname="logo-full-text.svg"
    inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -26,9 +26,9 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:zoom="2.2105634"
-   inkscape:cx="246.99585"
-   inkscape:cy="99.295951"
+   inkscape:zoom="4.4679057"
+   inkscape:cx="318.49374"
+   inkscape:cy="16.674479"
    inkscape:window-width="2252"
    inkscape:window-height="1452"
    inkscape:window-x="0"
@@ -170,7 +170,7 @@
 </g>
 <text
    xml:space="preserve"
-   style="font-size:42.6667px;line-height:125%;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans';letter-spacing:0px;word-spacing:0px;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   style="font-size:42.6667px;line-height:125%;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';letter-spacing:0px;word-spacing:0px;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-weight:bold;font-style:normal;font-stretch:normal;font-variant:normal"
    x="173.02049"
    y="127.664"
    id="text45"><tspan
@@ -178,7 +178,7 @@
      id="tspan45"
      x="173.02049"
      y="127.664"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.6667px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans Bold';fill:#6369d1;fill-opacity:1;stroke:none">Biarritz 2026</tspan></text><g
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:42.6667px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans Bold';fill:#6369d1;fill-opacity:1;stroke:none">Biarritz 2026</tspan></text><g
    id="g45-2">
 	<rect
    x="51.706001"
@@ -276,6 +276,6 @@
      id="tspan2"
      x="182.21394"
      y="150.2005"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Adwaita Sans';-inkscape-font-specification:'Adwaita Sans';letter-spacing:1px;fill:#1f2041;fill-opacity:1;stroke:none">29 octobre - 1<tspan
-   style="font-size:65%;letter-spacing:1px;baseline-shift:super;fill:#1f2041;fill-opacity:1"
-   id="tspan3">er</tspan> novembre</tspan></text></svg>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';letter-spacing:1px;fill:#1f2041;fill-opacity:1;stroke:none">29 octobre - 1<tspan
+   style="font-size:65%;baseline-shift:super"
+   id="tspan1">er</tspan> novembre</tspan></text></svg>
