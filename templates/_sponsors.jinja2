@@ -26,6 +26,22 @@
           Yaal Coop prend soin de contribuer aux brique logicielles libres
           qu'elle emploie, par la correction de bugs, l'implémentation de
           fonctionnalités, ou la co-maintenance de certains projets.</p>
+
+      {% elif company == 'Mergify' %}
+         <p>Mergify aide les équipes de développement à livrer plus vite sans 
+         casser la branche principale. Notre merge queue teste et fusionne 
+         automatiquement les pull requests dans le bon ordre, en regroupant et 
+         parallélisant la CI : fini de surveiller les merges à la main et de 
+         payer des builds redondants. Au-delà de la file, Mergify ajoute les 
+         merge protections (des règles pour encadrer quand et comment le code 
+         est fusionné) et CI Insights, qui détecte et met en quarantaine les 
+         tests instables pour qu'un build rouge veuille enfin dire quelque 
+         chose. Conçu par des développeurs open source de longue date, Mergify 
+         est utilisé aussi bien par des startups en forte croissance que par 
+         certaines des plus grandes organisations d'ingénierie au monde. 
+         L'objectif est simple : garder votre branche principale verte, votre 
+         CI rapide et économique, et vos développeurs concentrés sur le 
+         code plutôt que sur le processus de merge.</p>
       {% endif %}
     {% elif lang == 'en' %}
       {% if company == 'estia' %}
@@ -38,6 +54,18 @@
           The company is located in Bordeaux and has 5 salaried partners.
           Python is our favorite language to write web services, scripts, free software and almost every cooperative projects.
         </p>
+      {% elif company == 'Mergify' %}
+        <p>Mergify helps engineering teams ship code faster without breaking main.
+        Our merge queue automatically tests and merges pull requests in the 
+        right order, batching and parallelizing CI so teams stop babysitting 
+        merges and stop paying for redundant builds. Beyond the queue, Mergify 
+        adds merge protections (rules for how and when code lands) and 
+        CI Insights, which detects and quarantines flaky tests so a red build 
+        finally means something. Built by long-time open source developers, 
+        Mergify is used by teams from fast-growing startups to some of the 
+        largest engineering organizations in the world. The goal is simple: 
+        keep your main branch green, your CI fast and cheap, and your developers
+        focused on writing code instead of fighting the merge process.</p>
       {% endif %}
     {% endif %}
   </div>
@@ -50,7 +78,9 @@
           'estia': 'https://www.estia.fr/',
       },
 
-      'Or' if lang == 'fr' else 'Gold': {},
+      'Or' if lang == 'fr' else 'Gold': {
+          'Mergify': 'https://mergify.com/',
+      },
 
       'Argent' if lang == 'fr' else 'Silver': {},
 
